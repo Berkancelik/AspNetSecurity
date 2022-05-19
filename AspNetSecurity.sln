@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhiteBlackList.Web", "White
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretProtection.Web", "SecretProtection.Web\SecretProtection.Web.csproj", "{7B13070D-E13B-4EE3-A88E-758EBA3247FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWeb.API", "MyWeb.API\MyWeb.API.csproj", "{395CA34C-9176-40B3-9D49-9FF301C68A43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{7B13070D-E13B-4EE3-A88E-758EBA3247FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B13070D-E13B-4EE3-A88E-758EBA3247FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B13070D-E13B-4EE3-A88E-758EBA3247FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
