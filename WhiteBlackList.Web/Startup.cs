@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WhiteBlackList.Web.Filters;
 using WhiteBlackList.Web.MiddleWares;
 
 namespace WhiteBlackList.Web
@@ -24,8 +25,14 @@ namespace WhiteBlackList.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<IPList>(Configuration.GetSection("IpList"));
 
+            // scopped içerisinde generic olarak belirttiðimiz sýnýftan nesne örneði alýnacaktýr, örnek alýnýrken dependency
+            // injection her tarafta uygulanmaktadýr.
+            services.AddScoped<CheckWhiteList>();
+
+
+
+            services.Configure<IPList>(Configuration.GetSection("IpList"));
             services.AddControllersWithViews();
         }
 
