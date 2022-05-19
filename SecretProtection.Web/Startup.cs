@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,6 +24,15 @@ namespace SecretProtection.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration["ConnectionString:SqlConnectionString"];
+            var builder = new SqlConnectionStringBuilder(connectionString);
+            builder.Password = Configuration["Passwords:SqlPassword"];
+            string conString = builder.ConnectionString;
+
+
+
+
+
             services.AddControllersWithViews();
         }
 
