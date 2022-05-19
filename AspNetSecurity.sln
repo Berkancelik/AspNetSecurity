@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretProtection.Web", "Sec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWeb.API", "MyWeb.API\MyWeb.API.csproj", "{395CA34C-9176-40B3-9D49-9FF301C68A43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWeb.Web", "MyWeb.Web\MyWeb.Web.csproj", "{4F406BB2-A7D5-476C-B23D-EC1D48190404}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395CA34C-9176-40B3-9D49-9FF301C68A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F406BB2-A7D5-476C-B23D-EC1D48190404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F406BB2-A7D5-476C-B23D-EC1D48190404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F406BB2-A7D5-476C-B23D-EC1D48190404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F406BB2-A7D5-476C-B23D-EC1D48190404}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
