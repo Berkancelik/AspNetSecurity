@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,28 @@ namespace MyWeb.Web
         {
             services.AddCors(opts =>
             {
-                opts.AddDefaultPolicy(builder =>
+                opts.AddPolicy("AllowSites", builder =>
                 {
-                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    // hangi domain dee çalýþacaðýný aþaðýda belirleriz
+                    builder.WithOrigins("https://www.instagram.com/", "https://twitter.com/home").
+                    AllowAnyHeader().AllowAnyMethod();
                 });
+
+
+                opts.AddPolicy("AllowSites2", builder =>
+                {
+                    builder.WithOrigins("https//*.example.com").SetIsOriginAllowedToAllowWildcardSubdomains().AllowAnyHeader().AllowAnyMethod();
+                });
+
+                opts.AddPolicy("AllowSites2,", builder =>
+                {
+                    builder.WithOrigins("https://twitter.com/hom").WithMethods("POST", "GET").AllowAnyHeader();
+
+                });
+
+
+
+
             });
             services.AddControllersWithViews();
         }

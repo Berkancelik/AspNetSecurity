@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace MyWeb.API.Controllers
             _logger = logger;
         }
 
+
+        [EnableCors("AllowSites2")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
