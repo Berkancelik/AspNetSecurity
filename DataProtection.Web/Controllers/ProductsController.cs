@@ -40,6 +40,17 @@ namespace DataProtection.Web.Controllers
             return View(products);
         }
 
+
+        [HttpPost]
+        public IActionResult Index(string searchText)
+        {
+            var products =  _context.Products.FromSqlRaw("select * from product where Name="+ ""+searchText+"").ToList();
+         
+            return View(searchText);
+        }
+
+
+
         // GET: Products/Details/5
         public async Task<IActionResult> Details(string id)
         {
